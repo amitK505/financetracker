@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/login.css">
+
+    
+    <title>login</title>
+</head>
+<body>
+    
+    <form method="POST">
+
+        {% csrf_token%}
+        {% if error %}
+        <div class="alert alert-danger" role="alert">
+            <p>username or password is incorrect</p>
+
+        </div>
+        {% endif %}
+        <div id="outer">
+            
+            <center><h1>login</h1></center><hr>
+            <div id="parent">
+                    <div id="name">
+                    <label for="name">UserName:</label><br>
+                
+                    
+
+                </div>
+                <input type="text" name="name" id="name"   placeholder="enter username"     required><br>
+                <div id="password">
+                    <label for="password">password</label><br>
+
+                </div>
+                
+                <input type="password" name="password" id="password" required placeholder="enter pasword"><br>
+                <div id="button">
+                    <button type="submit" class="login-btn" >login</button>
+                    <a href="{% url 'sign' %}">new user</a>
+
+                </div>
+                
+
+            </div>
+            
+        </div>
+    </form>
+</body>
+</html>

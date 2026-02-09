@@ -1,0 +1,109 @@
+/* ===== Reset & Base ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* ===== Navbar (top left user info) ===== */
+nav.left {
+    background: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* ===== Heading ===== */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #007bff;
+    font-size: 26px;
+}
+
+/* ===== Marquee ===== */
+marquee {
+    background: #e9ecef;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    color: #444;
+    font-style: italic;
+}
+
+/* ===== Form Styling ===== */
+form {
+    max-width: 450px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+input[type="text"],
+input[type="datetime-local"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 15px;
+}
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0,123,255,0.3);
+    outline: none;
+}
+
+/* ===== Buttons ===== */
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Save button = green */
+.save-btn {
+    background: #28a745;
+    color: #fff;
+}
+.save-btn:hover {
+    background: #1e7e34;
+}
+
+/* Cancel button = red, styled as link-button */
+.cancel-btn {
+    background: #dc3545;
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 8px;
+    transition: background 0.3s ease;
+}
+.cancel-btn:hover {
+    background: #a71d2a;
+}

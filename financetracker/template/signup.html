@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <link rel="stylesheet" href="/static/signin.css">
+</head>
+<body>
+    <form method="POST">
+
+        {%csrf_token%}
+        <h1>sign up first!</h1>
+        <label for="name">name</label>
+        <input type="text" name="name" id="name" placeholder="enter name">
+        <label for="gmail">gmail id</label>
+        <input type="gmail" name="gmail" id="gmail">
+        <label for="password">password</label>
+        <input type="text" name="password" id="password">
+        <button type="submit" class="sign-btn">sign up</button>
+        <a href="{%url 'login' %}">
+            already signup
+        </a>
+    </form>
+</body>
+</html>

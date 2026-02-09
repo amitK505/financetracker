@@ -1,0 +1,117 @@
+/* General Page Styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f7fa;
+    color: #333;
+    text-align: center;
+}
+
+/* Title Styling */
+h1 {
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+h5 {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+/* Form Container */
+form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Card Styling */
+.card1, .card2, .card3, .card4 {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card1:hover, .card2:hover, .card3:hover, .card4:hover {
+    transform: translateY(-5px);
+}
+
+/* Card Headings */
+.card1 h1, .card2 h1, .card3 h1, .card4 h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #34495e;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+/* Inputs */
+input[type="text"], 
+input[type="month"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #3498db;
+    box-shadow: 0px 0px 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Button group container */
+.button-group {
+    display: flex;
+    justify-content: center; /* center inside form */
+    gap: 15px;              /* space between buttons */
+    margin-top: 200px;
+    padding-bottom: 10px;
+    padding-top: 0%;
+}
+
+/* Button styling */
+.button-group button {
+    padding: 5px 9px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;   /* card-like rounded */
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Submit */
+.button-group button[type="submit"] {
+    background: #3498db;
+    color: white;
+}
+
+.button-group button[type="submit"]:hover {
+    background: #2980b9;
+}
+
+/* Cancel */
+.button-group .cancel-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.button-group .cancel-btn:hover {
+    background: #c0392b;
+}

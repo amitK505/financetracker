@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>daily dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <script>
+        function back() {
+            window.location.href='{% url "home" %}'
+            
+        }
+        function add() {
+            window.location.href='add/'
+            
+        }
+    </script>
+    <h1>daily bases rocord</h1>
+    <h2>hello ! {{name}}: this is your record of all expenses</h2>
+    <div class="card-container">
+        {% for x in showdata %}
+        <div class="card">
+            <h2>{{x.datetime}}</h2>
+            <p><strong>Grocery:</strong>{{x.grocery}}</p>
+            <p><strong>Online payments:</strong>{{x.onlinepayment}}</p>
+            <p><strong>Total spent</strong>{{x.total}}</p>
+            <a href="{% url 'update' x.id %}">
+                <button>update</button>
+            </a>
+            
+            <a href="{% url 'delete' x.id %}">
+                <button class="delete-btn">delete</button>
+            </a>
+
+        </div>
+        {% endfor%}
+
+
+    </div>
+    
+    <button type="submit" onclick="back()">back to dashboard</button>
+    <button type="submit" onclick="add()">add spent money</button>
+</body>
+</html>

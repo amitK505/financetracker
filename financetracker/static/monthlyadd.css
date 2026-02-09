@@ -1,0 +1,102 @@
+/* General Page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background: #f5f7fa;
+    color: #333;
+}
+
+/* Page Title */
+body > h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+/* Card Container */
+.card {
+    max-width: 850px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+/* Section Headings */
+.card h1 {
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #2980b9;
+    text-align: left;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* Labels & Inputs */
+label {
+    display: block;
+    margin: 10px 0 6px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #34495e;
+}
+
+input[type="text"],
+input[type="month"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="month"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 6px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+/* Button Container */
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* Buttons */
+button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background: #2ecc71;
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background: #27ae60;
+}
+
+/* Back Button */
+.back-btn {
+    background: #e67e22;
+    color: #fff;
+}
+
+.back-btn:hover {
+    background: #d35400;
+}

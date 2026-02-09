@@ -1,0 +1,191 @@
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Animated Gradient Background ===== */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(45deg, #00c6ff, #0072ff, #7f00ff, #e100ff);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* ===== Page Title ===== */
+h1 {
+  font-size: 40px;
+  
+  margin-top: 60px;
+
+  
+  color: #fff;
+  text-shadow: 1px 2px 8px rgba(0,0,0,0.3);
+}
+
+/* ===== Navbar Greeting ===== */
+nav h1 {
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px 25px;
+  border-radius: 12px;
+  display: inline-block;
+  
+  margin-bottom: 380px;
+  color: #fff;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+}
+
+/* ===== Logout Button ===== */
+#logout {
+  position: absolute;
+  top: 25px;
+  right: 50px;
+}
+
+/* Floating + glowing animated logout button */
+.logout-btn {
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 150, 255, 0.5);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  animation: floatButton 5s ease-in-out infinite, glowPulse 3s ease-in-out infinite;
+}
+
+/* Shiny hover sweep */
+.logout-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: 0.5s;
+}
+
+.logout-btn:hover::before {
+  left: 100%;
+}
+
+.logout-btn:hover {
+  transform: scale(1.07);
+  background: linear-gradient(45deg, #0072ff, #00c6ff);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
+}
+
+/* Floating + Glow Animations */
+@keyframes floatButton {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 15px rgba(0, 150, 255, 0.5); }
+  50% { box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); }
+}
+
+/* ===== Message Cards (Left & Right) ===== */
+.message-container-left,
+.message-container-right {
+  position: absolute;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.message-container-left { left: 40px; }
+.message-container-right { right: 40px; }
+
+.message-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 15px;
+  width: 260px;
+  text-align: left;
+  color: #fff;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: 0.4s;
+}
+.message-card:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-5px);
+}
+
+/* ===== Daily & Monthly Buttons ===== */
+.card-btn {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 25px 20px;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  width: 280px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* Daily Button Glow */
+.daily-btn {
+  background: linear-gradient(45deg, #ff4b1f, #ff9068);
+  box-shadow: 0 0 15px rgba(255, 75, 31, 0.4);
+}
+.daily-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 75, 31, 0.7);
+}
+
+/* Monthly Button Glow */
+.monthly-btn {
+  background: linear-gradient(45deg, #38ef7d, #11998e);
+  box-shadow: 0 0 15px rgba(56, 239, 125, 0.4);
+}
+.monthly-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(56, 239, 125, 0.7);
+}
+
+/* ===== Button Container Positions ===== */
+.daily, .monthly {
+  margin-top: 25px;
+}
+.daily {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-110%);
+}
+.monthly {
+  position: absolute;
+  left: 50%;
+  transform: translateX(10%);
+}

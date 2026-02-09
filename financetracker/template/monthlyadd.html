@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add  Monthly task</title>
+    <link rel="stylesheet" href="/static/monthlyadd.css">
+</head>
+<body>
+    <script>
+        function back() {
+            window.location.href="{% url 'monthly' %}";
+            
+        }
+
+    </script>
+    <h1> Add monthly expesive/spent</h1>
+    <div class="card">
+        <form  method="POST">
+            {% csrf_token%}
+            <div>
+                
+                    
+                <h1>please specify total income</h1>
+                <label for="income">Income</label>
+                <input type="text" name="income" id="income" placeholder="income"><br>
+                <label for="month">Month</label>
+                <input type="month" name="month" id="month">
+                <h1>fixed expensive</h1>
+                <label for="rent">Rent/EMI</label>
+                <input type="text" name="rent" id="rent" placeholder="enter amount"><br>
+                <label for="Utilities">Utilities (electricity, water, internet)</label>
+                <input type="text" name="Utilities" id="Utilities "placeholder="enter amount"><br>
+                <label for="Subscriptions">Subscriptions (OTT, gym, etc.)</label>
+                <input type="text" name="Subscriptions" id="Subscriptions" placeholder="enter amount">
+                    
+                
+
+            </div>
+            <div>
+                
+                <h1>Variable Expenses</h1>
+                <label for="food">Food & groceries</label>
+                <input type="text" name="food" id="food" placeholder="enter amount"><br>
+                <label for="transport">Transportation (fuel, cab, bus/train)</label>
+                <input type="text" name="transport" id="transport" placeholder="enter amount"><br>
+                <label for="shopping">Shopping & personal care</label>
+                <input type="text" name="shopping" id="shopping" placeholder="enter amount"><br>
+                    
+                
+            </div>
+            <div>
+                
+                <h1>Savings & Investments</h1>
+                <label for="bank">bank saving</label>
+                <input type="text" name="bank" id="bank" placeholder="enter amount"><br>
+                <label for="SIP">SIPs, Mutual funds</label>
+                <input type="text" name="SIP" id="SIP" placeholder="enter amount"><br>
+                    
+                
+            </div>
+            <div>
+                
+                    <h1>
+                        Irregular / Seasonal
+                    </h1>
+                    <label for="Festival">Festival shopping</label>
+                    <input type="text" name="Festival" id="Festival" placeholder="enter amount"><br>
+                    <label for="Medical">Medical expenses</label>
+                    <input type="text" name="Medical" id="Medical" placeholder="enter amount"><br>
+                    
+                
+            </div>
+            <div class="button-group">
+                <button type="submit">Submit</button>
+                <button type="button" onclick="back()" class="back-btn">Back</button>
+            </div>
+
+        
+        
+        
+
+        </form>
+        
+    </div>
+    
+    
+    
+    
+</body>
+</html>

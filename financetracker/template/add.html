@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add expenses</title>
+    <link rel="stylesheet" href="/static/add.css">
+</head>
+<body>
+    <nav class="left">
+        user:-{{name}}
+
+    </nav>
+    <h1>Add new Expense/spent</h1>
+    <marquee behavior="" direction="right-left">
+        this project is made by amit kumar &nbsp;  &nbsp;
+        Note:- welcome to the Expense manager or daily/monthly spent tracker...... &nbsp;
+        welcome to the Expense manager or daily/monthly spent tracker...... &nbsp;
+    </marquee>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="grocery">grocery spent</label>
+        <input type="text" name="grocery" id="grocery" value="" required><br>
+        <label for="insurence">online payments spent</label>
+        <input type="text" name="onlinepayment" id="onlinepayment" value="" required><br>
+        <input type="datetime-local" autofocus value="" name="datetime" required><br>
+        
+        <button type="submit" class="save-btn">save</button>
+        
+        <button class="cancel-btn" onclick="cancel()">cancel</button>
+        
+    </form>
+    <script>
+        function cancel() {
+            window.location.href ="{% url 'daily' %}"
+            
+        }
+    </script>
+</body>
+</html>

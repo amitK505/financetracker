@@ -1,0 +1,126 @@
+/* Background animation */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Page setup */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #00c6ff, #0072ff, #7f00ff, #e100ff);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+
+/* Form container */
+form {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 40px 45px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 350px;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Form fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Heading */
+h1 {
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+/* Labels */
+label {
+  display: block;
+  color: #fff;
+  text-align: left;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* Input fields */
+input[type="text"], input[type="gmail"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="gmail"]:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+  background: #fff;
+}
+
+/* Animated Sign-Up Button */
+.sign-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+/* Button hover animation */
+.sign-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: 0.5s;
+}
+
+.sign-btn:hover::before {
+  left: 100%;
+}
+
+.sign-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Link styling */
+a {
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #00ffff;
+  text-decoration: underline;
+}

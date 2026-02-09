@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>monthly dashboard</title>
+    <link rel="stylesheet" href="/static/monthly.css">
+</head>
+<body>
+    <script>
+        function back() {
+            window.location.href='{% url "home" %}';
+            
+        }
+        function add() {
+            window.location.href='add';
+            
+        }
+
+    </script>
+    <h1>monthly finance tracker dashboard</h1>
+    <nav class="left">
+        user:-{{name}}
+
+    </nav>
+    <div class="card-container">
+        {% for x in showdata2 %}
+        <div class="card">
+            <h2>{{x.month}}</h2>
+            <p><strong>income:</strong>{{x.income}}</p>
+            <p><strong>totalspent:</strong>{{x.totalspent}}</p>
+            <p><strong>fixed Expenses :</strong>{{x.fixed_expenses}}</p>
+            <p><strong>varaiable Expenses:</strong>{{x.varaiable_expenses}}</p>
+            <p><strong>saving:</strong>{{x.saving}}</p>
+            <p><strong>sessional Expenses :</strong>{{x.sessional}}</p>
+            
+            <a href="{% url 'updatemonthly' x.id %}">
+                <button>update</button>
+            </a>
+            
+            <a href="{% url 'deletemonthly' x.id %}">
+                <button class="delete-btn">delete</button>
+            </a>
+
+        </div>
+        {% endfor%}
+
+
+    </div>
+    <button type="submit" onclick="add()">ADD</button>
+    <button type="submit" onclick="back()">back to home</button>
+</body>
+</html>
